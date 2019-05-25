@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:mobilefinal2/models/Users.dart';
+
+import 'Home.dart';
 
 class Friend extends StatefulWidget {
+  Users userInfo;
+  Friend(this.userInfo);
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return FriendState();
+    return FriendState(userInfo);
   }
 
 }
@@ -12,12 +18,18 @@ class Friend extends StatefulWidget {
 
 
 class FriendState extends State<Friend>{
+  Users userInfo;
+  FriendState(this.userInfo);
+
 
   RaisedButton back(){
     return RaisedButton(
       child: Text("BACK"),
       onPressed: (){
-        Navigator.pop(context);
+        Navigator.push(context, 
+          MaterialPageRoute(
+          builder: (context) => Home(userInfo)
+        ));
       },
     );
   }

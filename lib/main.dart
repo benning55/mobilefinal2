@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
         "/": (context) => Process(),
         "/register": (context) => Register(),
         "/login": (context) => LogIn(),
-        "/friend": (context) => Friend()
       },
     );
   }

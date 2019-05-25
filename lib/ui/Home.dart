@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobilefinal2/models/Users.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'Friend.dart';
 import 'LogIn.dart';
 import 'Profile.dart';
 
@@ -45,7 +46,10 @@ class HomeState extends State<Home>{
         "MY FRIENDS"
       ),
       onPressed: (){
-        Navigator.pushReplacementNamed(context, "/friend");
+        Navigator.push(context, 
+          MaterialPageRoute(
+          builder: (context) => Friend(userInfo)
+        ));
       },
     );
   }

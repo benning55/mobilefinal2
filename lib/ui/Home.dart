@@ -3,6 +3,7 @@ import 'package:mobilefinal2/models/Users.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'LogIn.dart';
+import 'Profile.dart';
 
 
 class Home extends StatefulWidget{
@@ -30,12 +31,11 @@ class HomeState extends State<Home>{
         "PROFILE SETUP"
       ),
       onPressed: (){
-        // Navigator.push(context, 
-        //   MaterialPageRoute(
-        //   builder: (context) => Profile(userInfo, all_user)
-        // ));
+        Navigator.push(context, 
+          MaterialPageRoute(
+          builder: (context) => Profile(userInfo)
+        ));
       },
-      color: Theme.of(context).accentColor,
     );
   }
 
@@ -45,8 +45,8 @@ class HomeState extends State<Home>{
         "MY FRIENDS"
       ),
       onPressed: (){
+        Navigator.pushReplacementNamed(context, "/friend");
       },
-      color: Theme.of(context).accentColor,
     );
   }
 
@@ -62,7 +62,6 @@ class HomeState extends State<Home>{
         prefs.remove('ID');
         Navigator.pushReplacementNamed(context, "/login");
       },
-      color: Theme.of(context).accentColor,
     );
   }
   @override

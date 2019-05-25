@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobilefinal2/ui/Friend.dart';
 import 'package:mobilefinal2/ui/Process.dart';
 
 
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => Process(),
         "/register": (context) => Register(),
-        "/login": (context) => LogIn()
+        "/login": (context) => LogIn(),
+        "/friend": (context) => Friend()
       },
     );
   }

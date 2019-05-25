@@ -9,22 +9,34 @@ class Friend extends StatefulWidget {
 
 }
 
+
+
 class FriendState extends State<Friend>{
+
+  RaisedButton back(){
+    return RaisedButton(
+      child: Text("BACK"),
+      onPressed: (){
+        Navigator.pop(context);
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text("Friend"),
+        title: Text("Register"),
       ),
 
-      body: Center(
-        child: Container(
-          child: ListView(
-            children: <Widget>[
-              Text("This is Friend page")
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: ListView(
+          padding: EdgeInsets.all(20.0),
+          shrinkWrap: true,
+          children: <Widget>[
+            back()
+          ],
         ),
       ),
     );

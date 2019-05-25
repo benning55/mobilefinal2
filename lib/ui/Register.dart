@@ -106,11 +106,8 @@ class RegisterState extends State<Register> {
 
   RaisedButton regis() {
     return RaisedButton(
-      color: Theme.of(context).accentColor,
-      splashColor: Colors.blueGrey,
       child: Text(
         "REGISTER NEW ACCOUNT",
-        style: TextStyle(color: Colors.white),
       ),
       onPressed: () async {
         if (_formKey.currentState.validate()) {

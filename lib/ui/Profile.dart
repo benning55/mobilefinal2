@@ -127,7 +127,6 @@ class ProfileState extends State<Profile> {
 
   RaisedButton saves() {
     return RaisedButton(
-      color: Theme.of(context).accentColor,
       child: Text(
         "SAVE",
       ),
